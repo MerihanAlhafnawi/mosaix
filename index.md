@@ -1,6 +1,6 @@
-## MOSAIX
+## Create collaborative art with robot tiles!
 
-Create collaborative art with robot tiles!
+
 
 ### Markdown
 
