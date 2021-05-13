@@ -8,12 +8,16 @@
 <p>Choose the screen colour of your robot:</p>
 
 <div>
-    <input type="color" id="colour" name="colour"
+    <input type="color" id="colour" name="colour" onchange="change_colour(this.value)"
            value="#e66465">
     <label for="head">Head</label>
 </div>
 
-
+<?php
+$jsonString = file_get_contents('data/robots.json');
+$data = json_decode($jsonString, true);
+print ($data)
+?>
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
 ```markdown
