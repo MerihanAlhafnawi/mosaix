@@ -16,8 +16,9 @@
 <?php
 $jsonString = file_get_contents('data/robots.json');
 $data = json_decode($jsonString, true);
-print ($data)
+print ($data);
 ?>
+
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
 ```markdown
