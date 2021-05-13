@@ -2,7 +2,16 @@
 
 
 
-### Markdown
+### Screen colour
+
+
+<p>Choose the screen colour of your robot:</p>
+
+<div>
+    <input type="color" id="colour" name="colour"
+           value="#e66465">
+    <label for="head">Head</label>
+</div>
 
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
