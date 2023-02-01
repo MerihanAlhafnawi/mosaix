@@ -81,7 +81,7 @@ Any cable
 
 The following are components soldered onto the Base PCB:
 
-<img width="590" alt="image" src="https://user-images.githubusercontent.com/29374608/216159970-e56df0eb-82b4-4b00-9184-0723e87aa5a5.png">
+<img width="590" alt="image" src="https://user-images.githubusercontent.com/29374608/216168968-abb04d05-424d-47e3-bf22-700296ab6143.png">
 
 A) Time-of-flight distance sensors.
 B) I/O I2C expander microchip. 
@@ -94,7 +94,7 @@ H) Castor ball.
 
 As for the 3D components, here is an image explaining the role of each component: 
 
-![image](https://user-images.githubusercontent.com/29374608/216163059-6e62c525-9ad4-4923-9ebd-766a2dfe3a36.png)
+<img src="https://user-images.githubusercontent.com/29374608/216163059-6e62c525-9ad4-4923-9ebd-766a2dfe3a36.png" width="300" height="400">
 
 A) 4 Holes on each side of the shell for proximity sensors. 
 B) 4 screw holes at the bottom corners of the shell to screw in the base PCB. 
@@ -105,6 +105,8 @@ F) This part is placed between the touchscreen and the Raspberry Pi and hooks on
 G) This part is glued onto the side of the power pack to help keep it in place since the power pack is narrower than the case. This part can be seen in image C) of the next figure.
 
 After soldering components onto the base PCB, soldering the Adapter PCB onto the pins of the Raspberry Pi, and printing assembly goes as follows:
+
+<img src="https://user-images.githubusercontent.com/29374608/216169131-8baaff8b-af67-43cf-8f5b-b6b832f255c9.png" width="400" height="400">
 
 
 
