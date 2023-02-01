@@ -1,12 +1,14 @@
 # MOSAIX
 
-Thanks for stopping by! You can find anything MOSAIX related on this page. ![tiles_robocorn](https://user-images.githubusercontent.com/29374608/216107454-b68f4db4-6543-4b74-97f2-ef2efb65c9f4.jpeg)
+Thanks for stopping by! You can find anything MOSAIX related on this page.
 
-##What is MOSAIX?
+<img src="https://user-images.githubusercontent.com/29374608/216107454-b68f4db4-6543-4b74-97f2-ef2efb65c9f4.jpeg" width="300" height="400">
+
+## What is MOSAIX?
 
 MOSAIX is the first swarm robotic system (completely decentralised) desinged and built to be used by members of the public in large numbers (many robots and many people) to help them in social tasks such as decision-making, brainstorming, art-making and education. MOSAIX is made of individual robots called Tiles. As part of my PhD, I designed and built 100 Tiles. 
 
-##How do I build a Tile?
+## How do I build a Tile?
 
 Building a Tile is simple since most components are off the shelf. Tiles run on a Rasberry Pi 4. However, the base of the Tile is a PCB of our design, and there is one more PCB (the adaprter) that is soldered onto the Raspberry Pi's pins. We also designed some 3D printed components to support the robot, found in [a relative link](STL files). The gerber files for both boards can be found in [a relative link](Base_gerberfiles) and [a relative link](Adapter_gerberfiles). 
 
@@ -90,10 +92,23 @@ F) Micro metal gearmotors.
 G) Power switch.
 H) Castor ball. 
 
-Here 
+As for the 3D components, here is an image explaining the role of each component: 
+
+![image](https://user-images.githubusercontent.com/29374608/216163059-6e62c525-9ad4-4923-9ebd-766a2dfe3a36.png)
+
+A) 4 Holes on each side of the shell for proximity sensors. 
+B) 4 screw holes at the bottom corners of the shell to screw in the base PCB. 
+C) An opening that exposes the USB-C input socket of the power pack in order to charge the robot without opening the case. 
+D) A "pocket" that has a hole where the camera is placed, and secured in place by the small shelf in shown in E). 
+E) Camera shelf.
+F) This part is placed between the touchscreen and the Raspberry Pi and hooks onto the Ethernet port to help level the touchscreen. It can been seen in image A) of the next figure . 
+G) This part is glued onto the side of the power pack to help keep it in place since the power pack is narrower than the case. This part can be seen in image C) of the next figure.
 
 After soldering components onto the base PCB, soldering the Adapter PCB onto the pins of the Raspberry Pi, and printing assembly goes as follows:
-![stack_explained](https://user-images.githubusercontent.com/29374608/216160143-9257abc1-dcae-4b60-a05f-ac67b7fdff2c.png)
+
+
+
+
 
 
 
