@@ -87,11 +87,7 @@ except:
     print ("Left sensor not working")
     backgrd = "red" 
 
-
-
-
-#### set output pins for motor drivers   S
-### warning, standby and in2 are swapped in schematic
+#### set output pins for motor drivers 
 
 in1 = mcp.get_pin(9)
 in1.pull = Pull.UP
@@ -118,28 +114,15 @@ stby.pull = Pull.UP
 stby.direction = Direction.OUTPUT
 stby.value = True
 
-#in1 = 6
-#in2 = 13
-#in3 = 26
-#in4 = 20
-#stby = 19
 en = 5
 en2 = 6
 
 temp1=0
-#en2 = 21
 GPIO.setmode(GPIO.BCM)
-#GPIO.setup(in1,GPIO.OUT)
-#GPIO.setup(in2,GPIO.OUT)
-#GPIO.setup(in3,GPIO.OUT)
-#GPIO.setup(in4,GPIO.OUT)
+
 GPIO.setup(en,GPIO.OUT)
 GPIO.setup(en2,GPIO.OUT)
-#GPIO.setup(stby,GPIO.OUT)
-#GPIO.output(in1,GPIO.LOW)
-#GPIO.output(in2,GPIO.LOW)
-#GPIO.output(in3,GPIO.LOW)
-#GPIO.output(in4,GPIO.LOW)
+
 p_val=GPIO.PWM(en,1000)
 p2_val = GPIO.PWM(en2,1000)
 p_val.start(50)
@@ -148,7 +131,6 @@ p_val.ChangeDutyCycle(50)
 p2_val.ChangeDutyCycle(50)
 
 start_time = 0
-#GPIO.output(stby, GPIO.HIGH);
 stby.value = True
 def move(direction):
         i1, i2, i3, i4 = dir(direction)
@@ -315,14 +297,11 @@ def listen():
     print ("last message", last_message)
     if (data == 'handshake'):
         if (last_message != 'handshake'):
-            #if (started1 == False):
                 start_text.value =" Handshake.... ok"
                 print ("Handshake")
                 backgrd = "yellow"
                 last_message = 'handshake'
-                #p = subprocess.Popen(["python3", "/home/pi/Desktop/code.py", str(addr[0]), str(addr[1])])               
-                #started1 = True
-
+              
     elif (data[0] == 'r' and data[1] == 'u' and data[2] == 'n'):
         if (last_message != 'run1'):
             run_code()
@@ -377,13 +356,6 @@ def listen():
         subprocess.call("sudo poweroff", shell=True)
 
 
-       
-        #while True:
-             #client.   sendto(message, addr  
-    #elif (data == b'stop'):
-        #stop_code
-    #elif (data == b'shutdown'):
-        #shutdown
 _thread.start_new_thread(listen,())
 
 
@@ -404,7 +376,6 @@ def main_app():
 
 title_app = "Robot ID: " + robot_id
 app = App(title=title_app, bg = "black", layout = "grid")
-#app.tk.attributes("-fullscreen",True)
 
 run_code_btn = PushButton(app, width=10, height=4, grid=[0,0], command= lambda: run_code(), text = "Run code")
 run_code_btn_colour = "sea green"
@@ -428,7 +399,6 @@ test_sensors_btn_colour= "dark turquoise"
 
 start_text = Text(app, grid=[3,0,3,3], font="Helvetica", size=10, text = "Hello") 
     
-#GUI
 
 main_app()
 
