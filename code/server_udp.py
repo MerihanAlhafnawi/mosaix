@@ -24,10 +24,7 @@ server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEPORT, 1)
 # Enable broadcasting mode
 server.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
 server.bind(("", 37021))
-#server.setblocking(0)
-# Set a timeout so the socket does not block
-# indefinitely when trying to receive data.
-#server.settimeout(0.2)
+
 started1 = False
 started2 = False
 neighbourhood = []
@@ -56,8 +53,6 @@ def recv_thread(server):
         data, addr = server.recvfrom(1024)
         print("message received!", data) 
         decoded = bytes.decode(data, 'utf-8')
-        #data = 'rpi77a2oMORE_WATER_NOW rpi89a6oBUILD_PARKS rpi77a2oLESS_WATER_NOW'
-        #neighbours = data.split()
         print (neighbourhood)
         rid = ""
         found_neighbour = False
@@ -82,7 +77,6 @@ def recv_thread(server):
             else:
                 break
             curr_pos = i
-        #opinion = opinion.replace("_", " ")
         for l in range (len(neighbourhood)):  
 
             if (neighbourhood[l][0] == rid):
@@ -128,7 +122,6 @@ def recv_thread(server):
         
         
         send_text = str.encode(send_neighbourhood, 'utf-8')
-        #server.sendto(send_text, ('<broadcast>', 37021))
 #example: b'rid13uid8cond35h1m9s7'
 #example: b'rid1uid8cond35h1m9s7'
 #rid: robot ID that goes from 1-100
