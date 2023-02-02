@@ -104,13 +104,13 @@ E) Camera shelf.
 F) This part is placed between the touchscreen and the Raspberry Pi and hooks onto the Ethernet port to help level the touchscreen. It can been seen in image A) of the next figure . 
 G) This part is glued onto the side of the power pack to help keep it in place since the power pack is narrower than the case. This part can be seen in image C) of the next figure.
 
-After soldering components onto the base PCB, soldering the Adapter PCB onto the pins of the Raspberry Pi, and printing assembly goes as follows:
+We made the cable that connects the power bank to the USB micro connector on the base board by getting a USB A to USB micro cable, cutting it, getting rid of the USB A side, and soldering the VCC and ground wires to the USB connector. The cable can be seen in image C) of the next figure.
+
+After soldering components onto the base PCB, soldering the Adapter PCB onto the pins of the Raspberry Pi, and 3D printing, assembly goes as follows:
 
 <img src="https://user-images.githubusercontent.com/29374608/216169131-8baaff8b-af67-43cf-8f5b-b6b832f255c9.png" width="400" height="400">
 
-
-
-
+Assembly all done!
 
 
 
