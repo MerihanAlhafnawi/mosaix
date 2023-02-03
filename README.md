@@ -10,7 +10,10 @@ MOSAIX is the first swarm robotic system (completely decentralised) desinged and
 
 ## How do I build a Tile?
 
-Building a Tile is simple since most components are off the shelf. Tiles run on a Rasberry Pi 4. However, the base of the Tile is a PCB of our design, and there is one more PCB (the adaprter) that is soldered onto the Raspberry Pi's pins. We also designed some 3D printed components to support the robot, found in [STL files](STL files). The gerber files for both boards can be found in [Base_gerberfiles](Base_gerberfiles) and [Adapter_gerberfiles](Adapter_gerberfiles). 
+Building a Tile is simple since most components are off the shelf. Tiles run on a Rasberry Pi 4. However, the base of the Tile is a PCB of our design, and there is one more PCB (the adaprter) that is soldered onto the Raspberry Pi's pins. We also designed some 3D printed components to support the robot, found in [STL files](STL files). The gerber files for both boards can be found in [Base_gerberfiles](Base_gerberfiles) and [Adapter_gerberfiles](Adapter_gerberfiles). The Tile is essentially a stack of the following components:
+
+<img width="807" alt="image" src="https://user-images.githubusercontent.com/29374608/216730602-cc793aee-4ec1-4ec0-92f5-bf90cd3e0ae0.png">
+
 
 In order to build a Tile, the following steps need to be taken:
 1- Send the PCBs to be manufactured 
@@ -81,16 +84,7 @@ Any cable
 
 The following are components soldered onto the Base PCB:
 
-<img width="590" alt="image" src="https://user-images.githubusercontent.com/29374608/216168968-abb04d05-424d-47e3-bf22-700296ab6143.png">
-
-A) Time-of-flight distance sensors.
-B) I/O I2C expander microchip. 
-C) Cable connector plug. 
-D) USB micro connector. 
-E) Motor driver.
-F) Micro metal gearmotors. 
-G) Power switch.
-H) Castor ball. 
+<img width="914" alt="image" src="https://user-images.githubusercontent.com/29374608/216730310-912e55fb-0050-44a6-b91d-b4818f00dcdf.png">
 
 As for the 3D components, here is an image explaining the role of each component: 
 
@@ -114,7 +108,7 @@ Assembly all done!
 
 ## How do Tiles communicate?
 
-Since MOSAIX was built to be a decentralised system, I've created a WiFi ad-hoc network to run among the robots so we can avoid any central points of failure (for example, by avoiding using a router). This type of network acts as a plug-and-play feature, where as soon as any of the Raspberry Pis are turned on, the network becomes live (no need to do any extra steps). This means that the swarm can operate and communicate independent of location or internet access. Also, you can connect your laptop/phone to the network to coommunicate with the robots (add a password if you're worried about malicious activity). The network has been quite reliable so far, and I tested it with 65+ robots with no issues. I also have a centralised network for when I want to update the code running on the robots. I can easily switch between those 2 networks (please note I am running the 64-bit Bullseye OS). 
+Since MOSAIX was built to be a decentralised system, I've created a WiFi ad-hoc network to run among the robots so we can avoid any central points of failure (for example, by avoiding using a router). This type of network acts as a plug-and-play feature, where as soon as any of the Raspberry Pis are turned on, the network becomes live (no need to do any extra steps). This means that the swarm can operate and communicate independent of location or internet access. Also, you can connect your laptop/phone to the network to coommunicate with the robots (add a password if you're worried about malicious activity). The network has been quite reliable so far, and I tested it with 65+ robots with no issues. I also have a centralised network for when I want to update the code running on the robots. I can easily switch between those 2 networks (please note I am running the Debian 64-bit Bullseye Operating System). 
 
 First, I set up the ad-hoc network by editing the network interfaces which is found in /etc/network/interfaces. The following snippet is an example of the ad-hoc network settings added to get the network up and running on the Raspberry Pi.
 
@@ -133,7 +127,10 @@ Bluetooth is another option, however, I found it to be unreliable so I do not us
 
 ## How do I program Tiles?
 
+They run on Rasberry Pis so sky is the limit!! However, to make my life easier, I have a system I developed in order to update code on the entire swarm of Tiles, turn them off all at once, etc. Here is what I do (DISCLAIMER: I am not claiming this is the best/most efficient way,
+it's just a system that I created and worked for my applications, feel free to adopt and/or develop your own!):
 
+Coming soon
 
 
 
