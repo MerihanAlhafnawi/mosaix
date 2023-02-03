@@ -112,6 +112,26 @@ After soldering components onto the base PCB, soldering the Adapter PCB onto the
 
 Assembly all done!
 
+## How do Tiles communicate?
+
+Since MOSAIX was built to be a decentralised system, I've created a WiFi ad-hoc network to run among the robots so we can avoid any central points of failure (for example, by avoiding using a router). This type of network acts as a plug-and-play feature, where as soon as any of the Raspberry Pis are turned on, the network becomes live (no need to do any extra steps). This means that the swarm can operate and communicate independent of location or internet access. Also, you can connect your laptop/phone to the network to coommunicate with the robots (add a password if you're worried about malicious activity). The network has been quite reliable so far, and I tested it with 65+ robots with no issues. I also have a centralised network for when I want to update the code running on the robots. I can easily switch between those 2 networks (please note I am running the 64-bit Bullseye OS). 
+
+First, I set up the ad-hoc network by editing the network interfaces which is found in /etc/network/interfaces. The following snippet is an example of the ad-hoc network settings added to get the network up and running on the Raspberry Pi.
+
+iface wlan0 inet static
+address 10.2.1.1
+netmask 255.255.255.0
+wireless-channel 1
+wireless-essid mosaix
+wireless-mode ad-hoc
+
+In order to switch between ad-hoc and centralised WiFi, I trigger a shell command to replace the "wpa_supplicant.conf" file wither to the ad-hoc or to the central WiFi configurations. Both files can be found in [a relative link](code). More on how this is done is under "How do I program Tiles?".
+
+Bluetooth is another option, however, I found it to be unreliable so I do not use it often.
+
+## How do I program Tiles?
+
+
 
 
 
