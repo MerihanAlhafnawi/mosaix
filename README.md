@@ -118,12 +118,14 @@ Since MOSAIX was built to be a decentralised system, I've created a WiFi ad-hoc 
 
 First, I set up the ad-hoc network by editing the network interfaces which is found in /etc/network/interfaces. The following snippet is an example of the ad-hoc network settings added to get the network up and running on the Raspberry Pi.
 
+```
 iface wlan0 inet static
 address 10.2.1.1
 netmask 255.255.255.0
 wireless-channel 1
 wireless-essid mosaix
 wireless-mode ad-hoc
+```
 
 In order to switch between ad-hoc and centralised WiFi, I trigger a shell command to replace the "wpa_supplicant.conf" file wither to the ad-hoc or to the central WiFi configurations. Both files can be found in [code](code). More on how this is done is under "How do I program Tiles?".
 
