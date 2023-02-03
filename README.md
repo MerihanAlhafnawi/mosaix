@@ -2,7 +2,7 @@
 
 Thanks for stopping by! You can find anything MOSAIX related on this page.
 
-<img src="https://user-images.githubusercontent.com/29374608/216107454-b68f4db4-6543-4b74-97f2-ef2efb65c9f4.jpeg" width="300" height="400">
+<img src="https://user-images.githubusercontent.com/29374608/216107454-b68f4db4-6543-4b74-97f2-ef2efb65c9f4.jpeg" width="300" height="400"><img src="https://user-images.githubusercontent.com/29374608/216227490-1782ec4a-9e21-4412-abe6-bf9b91e0a8cd.png" width="250" height="250"><img src="https://user-images.githubusercontent.com/29374608/216227238-a9f7ca36-a9c4-446f-b37c-8a28b64a20fe.JPG" width="400" height="300">
 
 ## What is MOSAIX?
 
