@@ -10,7 +10,7 @@ MOSAIX is the first swarm robotic system (completely decentralised) desinged and
 
 ## How do I build a Tile?
 
-Building a Tile is simple since most components are off the shelf. Tiles run on a Rasberry Pi 4. However, the base of the Tile is a PCB of our design, and there is one more PCB (the adaprter) that is soldered onto the Raspberry Pi's pins. We also designed some 3D printed components to support the robot, found in [a relative link](STL files). The gerber files for both boards can be found in [a relative link](Base_gerberfiles) and [a relative link](Adapter_gerberfiles). 
+Building a Tile is simple since most components are off the shelf. Tiles run on a Rasberry Pi 4. However, the base of the Tile is a PCB of our design, and there is one more PCB (the adaprter) that is soldered onto the Raspberry Pi's pins. We also designed some 3D printed components to support the robot, found in [STL files](STL files). The gerber files for both boards can be found in [Base_gerberfiles](Base_gerberfiles) and [Adapter_gerberfiles](Adapter_gerberfiles). 
 
 In order to build a Tile, the following steps need to be taken:
 1- Send the PCBs to be manufactured 
@@ -125,7 +125,7 @@ wireless-channel 1
 wireless-essid mosaix
 wireless-mode ad-hoc
 
-In order to switch between ad-hoc and centralised WiFi, I trigger a shell command to replace the "wpa_supplicant.conf" file wither to the ad-hoc or to the central WiFi configurations. Both files can be found in [a relative link](code). More on how this is done is under "How do I program Tiles?".
+In order to switch between ad-hoc and centralised WiFi, I trigger a shell command to replace the "wpa_supplicant.conf" file wither to the ad-hoc or to the central WiFi configurations. Both files can be found in [code](code). More on how this is done is under "How do I program Tiles?".
 
 Bluetooth is another option, however, I found it to be unreliable so I do not use it often.
 
