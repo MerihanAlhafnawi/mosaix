@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this repo to recreate MOSAIX, please cite it as below."
+authors:
+  - family-names: Alhafnawi
+    given-names: Merihan
+title: "MOSAIX: a swarm of robot Tiles"
+identifiers:
+  - type: doi
+    value: 10.1109/ICRA46639.2022.9811723
+date-released: 2023-01-25
